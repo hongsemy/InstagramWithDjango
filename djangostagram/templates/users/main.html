@@ -1,0 +1,9 @@
+Here is main.html
+
+<form action= "{% url 'users:main' %}" method = 'post'>
+    {% csrf_token %}
+    <!-- The following will be passed to the above url as a post method -->
+    <input type="input" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="Login">
+</form>

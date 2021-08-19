@@ -1,5 +1,5 @@
 from django.db import models
-from Djangostagram.users import models as user_model
+from djangostagram.users import models as user_model
 
 # Create your models here.
 
@@ -36,7 +36,7 @@ class Comments(TimeStamedModel):
     posts = models.ForeignKey(
                 Posts,
                 null = True,
-                on_delete = models.CASCADE
+                on_delete = models.CASCADE,
                 related_name = "comment_post"
     )
-    contents = TextField(blank=True)
+    contents = models.TextField(blank=True)
