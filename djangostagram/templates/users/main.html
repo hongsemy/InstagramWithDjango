@@ -1,5 +1,12 @@
+{% extends "users/base.html" %}
+
+{% block title %}
+Login
+{% endblock title%}
+
 Here is main.html
 
+{% block contents %}
 <form action= "{% url 'users:main' %}" method = 'post'>
     {% csrf_token %}
     <!-- The following will be passed to the above url as a post method -->
@@ -7,3 +14,6 @@ Here is main.html
     <input type="password" name="password" placeholder="password">
     <input type="submit" value="Login">
 </form>
+
+<a href = "{% url 'users:signup' %}">Sign Up</a>
+{% endblock contents %}

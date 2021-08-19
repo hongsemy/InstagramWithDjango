@@ -1,6 +1,17 @@
 Djangostagram
 =============
 
+To-Do
+-------------
+- [] Create post
+- [] Read post [feed]
+- [] Update post
+- [] Delete post
+- [] comment
+- [] likes
+- [] search
+- [] profile feed
+
 Behold My Awesome Project!
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter

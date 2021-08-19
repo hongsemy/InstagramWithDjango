@@ -1,0 +1,22 @@
+{% extends "users/base.html" %}
+
+{% block title %}
+Sign Up
+{% endblock title%}
+
+<h1>Here is Sign Up Page</h1>
+
+{% block contents %}
+<form action="{% url 'users:signup' %}" method = "POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class='fieldwrapper'>
+            {{ field.errors }}
+            {{ field.label_tag }}{{ field }}
+        </div>
+    {% endfor %}
+    <input type = "submit" value = "Sign Up">
+</form>
+
+<a href = "{% url 'users:main' %}">Login</a>
+{% endblock contents %}
